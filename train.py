@@ -56,14 +56,13 @@ model.fit(
     validation_split=0.2
 )
 
-# 4. Compile model
+# 6. Evaluate model
 # --------------------------------
 
-model.compile(
-    optimizer="adam",
-    loss="sparse_categorical_crossentropy",
-    metrics=["accuracy"]
-)
+test_loss, test_accuracy = model.evaluate(x_test, y_test)
+
+print("Test Loss:", test_loss)
+print("Test Accuracy:", test_accuracy)
 
 # 7. Save model
 # --------------------------------
