@@ -19,3 +19,7 @@ import matplotlib.pyplot as plt
 # plt.title(f"Label: {y_train[0]}")
 # plt.show()
 
+# Normalize the data
+# ------------------
+x_train = x_train / 255.0
+x_test = x_test / 255.0
